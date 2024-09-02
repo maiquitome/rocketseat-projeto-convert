@@ -8,3 +8,10 @@ amount.addEventListener("input", () => {
   const characters = /\D+/g;
   amount.value = amount.value.replace(characters, "");
 });
+
+// Captando o evento de submit (enviar) do formulário.
+form.onsubmit = (event) => {
+  event.preventDefault();
+
+  console.log(currency.value);
+};
